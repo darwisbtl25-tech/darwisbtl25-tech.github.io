@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Darwis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Darwis</h1>
+        <p class="tagline">Instalasi rapi hasil pasti</p>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container card">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah teknisi yang tertarik pada pengembangan sistem automation berbasis teknologi.
+            Selain memahami instalasi dan sistem kelistrikan, saya juga mengembangkan kemampuan
+            pemrograman menggunakan Python untuk membangun sistem monitoring, kontrol,
+            dan website sederhana.
+        </p>
+        <p>
+            Saya percaya kombinasi keahlian teknis lapangan dan pemrograman adalah
+            fondasi kuat dalam membangun solusi automation yang efektif dan modern.
+        </p>
+    </div>
+</section>
+<section id="skills">
+    <div class="container card">
+        <h2>Skills</h2>
+
+        <div class="skill">
+            <p>Electrical Installation</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="90%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Wiring Installatino</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Throubleshooting Electrical</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Maintenance Electrical</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="75%"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <p>© 2026 Darwis | Automation & Technical Solutions</p>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const skillsSection = document.querySelector("#skills");
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                progressBars.forEach(bar => {
+                    bar.style.width = bar.getAttribute("data-width");
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(skillsSection);
+});
+</script>
+</body>
+</html>
