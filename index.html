@@ -7,6 +7,8 @@
   <meta name="description" content="Siwrad Electrik - Instalasi listrik rapi dan profesional, hasil pekerjaan berkualitas.">
   <meta name="keywords" content="Siwrad Electrik, Instalasi Listrik, Proyek Listrik, Profesional, Rapi">
   <meta name="author" content="Darwis">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#25D366">
 
   <!-- Judul Website -->
   <title>Siwrad Electrik - Instalasi Listrik Profesional</title>
@@ -142,5 +144,11 @@ document.addEventListener("DOMContentLoaded", function () {
           class="wa-icon">
   </a>
 </div>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
 </body>
 </html>
